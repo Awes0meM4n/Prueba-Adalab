@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import SignUp from './pages/SignUp';
 import PasswordForget from './pages/PasswordForget';
-import Home from './pages/Home';
 import Account from './pages/Account';
 import Navigation from './Navigation';
 
@@ -15,6 +14,7 @@ import { SignUpLink } from './pages/SignUp';
 import withAuthentication from './auth/withAuthentication';
 
 import * as ROUTES from '../constants/routes';
+import HomeCandidatas from './pages/HomeCandidatas';
 
 const App = () => (
   <Router>
@@ -45,7 +45,7 @@ const App = () => (
         </Landing>
       )}
     />
-    <Route path={ROUTES.HOME} render={() => withNavigation(Home)} />
+    <Route path={ROUTES.HOME} render={() => withNavigation(HomeCandidatas)} />
     <Route path={ROUTES.ACCOUNT} render={() => withNavigation(Account)} />
   </Router>
 );
